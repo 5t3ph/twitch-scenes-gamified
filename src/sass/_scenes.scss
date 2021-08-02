@@ -1,0 +1,80 @@
+.scene {
+  display: grid;
+  background-color: var(--color-surface-light);
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23262626' fill-opacity='0.25'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.scene-preshow,
+.scene-postshow,
+.scene-break {
+  place-content: center;
+}
+
+.scene-main {
+  grid-template-columns: 990px 1fr;
+  grid-auto-flow: column;
+}
+
+.scene-display {
+  justify-content: center;
+}
+
+.display-capture {
+  width: 990px;
+  background-color: var(--scene-key-color);
+}
+
+.webcams {
+  display: grid;
+  place-content: center;
+  gap: 5vh;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  li {
+    display: grid;
+
+    &::before {
+      content: "";
+      background-color: var(--scene-key-color);
+      border-radius: 50%;
+      width: 200px;
+      padding-bottom: 100%;
+    }
+
+    span {
+      align-self: end;
+      justify-self: center;
+      display: grid;
+      gap: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      width: fit-content;
+      transform: translateY(-25%);
+    }
+  }
+
+  span {
+    background-color: var(--color-surface);
+    padding: 0.25em;
+  }
+}
+
+.scene-game {
+  background-color: skyblue;
+  background-image: url(../img/flyer-bg.jpg);
+  background-size: cover;
+
+  .instructions {
+    background-color: rgba(white, 0.8);
+    color: var(--color-surface);
+    padding: 1rem 1rem 1rem 2rem;
+    margin: 1rem;
+    border-radius: 0.25rem;
+    font-size: 1.15rem;
+    box-shadow: 0.25rem 0.25rem 0 0 var(--color-primary);
+    align-self: start;
+    justify-self: end;
+  }
+}

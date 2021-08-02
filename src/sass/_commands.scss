@@ -1,0 +1,68 @@
+.command {
+  position: absolute;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 900;
+  font-size: 8rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  -webkit-text-stroke: 0.03em var(--color-text);
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+}
+
+main .command {
+  animation: active 1500ms ease-in-out;
+}
+
+@keyframes active {
+  10%,
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+main .command {
+  top: 3vh;
+  left: 4vw;
+}
+
+main .command:nth-of-type(odd) {
+  top: 50vh;
+  left: 5vw;
+}
+
+main .command:nth-of-type(3n) {
+  top: 23vh;
+  left: 60vw;
+}
+
+main .command:nth-of-type(3n + 1) {
+  top: 45vh;
+  left: 70vw;
+}
+
+main .command:nth-of-type(5n + 1) {
+  top: 17vh;
+  left: 29vw;
+}
+
+main .command:nth-of-type(7n) {
+  top: 55vh;
+  left: 35vw;
+}
+
+main .command:nth-of-type(7n + 1) {
+  top: 70vh;
+  left: 77vw;
+}
+
+main .command:nth-of-type(9n + 1) {
+  top: 1vh;
+  left: 78vw;
+}

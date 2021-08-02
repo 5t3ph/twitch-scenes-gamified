@@ -1,0 +1,28 @@
+.flyer {
+  --posX: 2vh;
+  --posY: -15vh;
+
+  position: absolute;
+  height: 15vh;
+  bottom: -13vh;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: transform 400ms cubic-bezier(0.23, 0.07, 0.55, 0.6);
+
+  &.inflight {
+    animation: flyer 180s cubic-bezier(0.23, 0.07, 0.55, 0.6) forwards;
+    transform: translateX(var(--posX)) translateY(var(--posY));
+  }
+}
+
+@keyframes flyer {
+  0.25%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 150vw;
+    bottom: -600vh;
+  }
+}

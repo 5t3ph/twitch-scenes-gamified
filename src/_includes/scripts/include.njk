@@ -1,0 +1,11 @@
+<script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+<script>
+const twitchUsername = "{{ stream.twitchUsername }}";
+const twitchOauth = "{{ stream.twitchOauth }}";
+const chatCommands = {{ stream.chatCommands | printJs | safe }};
+{% include "scripts/queue.js" %}
+{% include "scripts/flyer.js" %}
+{% include "scripts/effects.js" %}
+{% include "scripts/comfyUtilities.js" %}
+{% include "scripts/comfy.js" %}
+</script>

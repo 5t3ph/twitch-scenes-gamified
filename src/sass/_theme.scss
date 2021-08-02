@@ -1,0 +1,16 @@
+// chonky font used for chat command words
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&display=swap");
+
+:root {
+  // Used for Color Key (Green) Filter in OBS for capture areas
+  --scene-key-color: lime;
+  // Purple
+  --color-primary-hue: 275;
+  --color-surface: hsl(var(--color-primary-hue), 0%, 15%);
+  --color-surface-light: hsl(var(--color-primary-hue), 0%, 35%);
+  --color-primary: hsl(var(--color-primary-hue), 80%, 55%);
+  --color-text: hsl(var(--color-primary-hue), 15%, 95%);
+  --confetti-color1: hsl(calc(var(--color-primary-hue) + 80), 85%, 75%);
+  --confetti-color2: hsl(calc(var(--color-primary-hue) + 160), 85%, 75%);
+  --confetti-color3: hsl(calc(var(--color-primary-hue) + 240), 85%, 75%);
+}

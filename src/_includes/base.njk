@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<div class="highlight-chat"></div>
+	<div class="alerts"></div>
+	<div class="confetti"></div>
+
+  <main class="scene scene-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}main{% endif %}">
+    {{ content | safe }}
+	</main>
+  
+	<header>
+		<section class="details">
+			<h1>{{ stream.title }}</h1>
+			<h2>{{ stream.hostName }}</h2>
+			<em>{% if stream.guestName %}With {{ stream.guestName }}{% endif %}</em>
+			<ul class="commands">
+				{% for command in stream.chatCommands %}
+				<li>!{{ command }}</li>
+				{% endfor %}
+			</ul>
+		</section>
+
+		<section id="chatbox">
+			<div id="chatter">
+				<template id="chatMsg">
+					<p><strong></strong> <span></span></p>
+				</template>
+			</div>
+		</section>
+	</header>
+
+	<img class="flyer" src="/img/flyer.png" alt="">
+	{% include "scripts/include.njk" %}
+	{% include "commands.njk" %}
+</body>
+</html>

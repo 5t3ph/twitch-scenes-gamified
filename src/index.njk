@@ -1,0 +1,25 @@
+---
+title: Main
+---
+
+<div class="display-capture"></div>
+
+<ul class="webcams">
+  <li>
+    <span>{{ stream.hostName }}
+    {% if stream.hostTwitter %}
+      <em>@{{ stream.hostTwitter }}</em>
+    {% endif %}
+    </span>
+  </li>
+
+  {% if stream.guestName %}
+  <li>
+    <span>{{ stream.guestName }}
+      {% if stream.guestTwitter %}
+      <em>@{{ stream.guestTwitter }}</em>
+      {% endif %}
+    </span>
+  </li>
+  {% endif %}
+</ul>
